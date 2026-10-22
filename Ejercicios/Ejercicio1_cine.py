@@ -39,6 +39,8 @@ aplicará descuento. '''
 #  calcularDescuento : calcular el descuento a aplicar
 #  mostrarCompra : mostrar los detalles de la compra
 
+from tabulate import tabulate
+
 def leerCantidad():
     cantidad = int(input("Ingrese la cantidad de boletos a comprar: "))
     return cantidad
@@ -57,8 +59,13 @@ def calcularDescuento(subtotal, cantidad_boletos):
     return descuento_aplicado
 
 def mostrarCompra(cantidad_boletos, subtotal, descuento_aplicado, total_a_pagar):
+    datos = [
+        ["Precio del boleto", "$75.00"],
+        ["Cantidad de boletos", cantidad_boletos],
+        ["Subtotal", f"${subtotal:.2f}"],
+        ["Descuento", f"${descuento_aplicado:.2f}"],
+        ["Total a pagar", f"${total_a_pagar:.2f}"]
+    ]
+
     print("Detalles de la compra:")
-    print(f"Cantidad de boletos: {cantidad_boletos}")
-    print(f"Subtotal: {subtotal:.2f}")
-    print(f"Descuento: {descuento_aplicado:.2f}")
-    print(f"Total a pagar: {total_a_pagar:.2f}")
+    print(tabulate(datos, headers=["Concepto", "Resultado"], tablefmt="grid"))

@@ -1,5 +1,5 @@
 from Ejercicios.Ejercicio1_cine import leerCantidad, calcularSubtotal, calcularDescuento, mostrarCompra
-from Ejercicios.Ejercicio2_combustible import leerDatos,
+from Ejercicios.Ejercicio2_combustible import leerDatos,leerDatos, calcularRendimiento, calcularCosto, mostrarResultados
 
 
 def ejecutarEjercicio1():
@@ -10,15 +10,17 @@ def ejecutarEjercicio1():
     mostrarCompra(cantidad_boletos, subtotal, descuento_aplicado, total_a_pagar)
 
 def ejecutarEjercicio2():
- print("Ejecutando Ejercicio 2: Comisión de ventas")
+    distancia, litros = leerDatos()
+    rendimiento = calcularRendimiento(distancia, litros)
+    costo = calcularCosto(litros)
+    mostrarResultados(distancia, litros, rendimiento, costo)
  
-
 
 def mostrarMenu():
     print()
-    print("PRÁCTICA: DESARROLLO GUIADO POR ESPECIFICACIÓN") 
-    print("1. Importe de viaje en taxi") 
-    print("2. Comisión de ventas") 
+    print("Elija el caso que deseee llevar a cabo") 
+    print("1. costo de los boletos") 
+    print("2. rendimiento del combustible") 
 
     print("0. Salir") 
  

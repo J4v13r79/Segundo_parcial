@@ -1,0 +1,45 @@
+Ejercicio 1
+
+Elija el caso que deseee llevar a cabo
+1. costo de los boletos
+2. rendimiento del combustible
+0. Salir
+Seleccione una opción: 1
+Ingrese la cantidad de boletos a comprar: 4
+Detalles de la compra:
++---------------------+-------------+
+| Concepto            | Resultado   |
++=====================+=============+
+| Precio del boleto   | $75.00      |
++---------------------+-------------+
+| Cantidad de boletos | 4           |
++---------------------+-------------+
+| Subtotal            | $300.00     |
++---------------------+-------------+
+| Descuento           | $30.00      |
++---------------------+-------------+
+| Total a pagar       | $270.00     |
++---------------------+-------------+
+
+Ejercicio 2
+
+Elija el caso que deseee llevar a cabo
+1. costo de los boletos
+2. rendimiento del combustible
+0. Salir
+Seleccione una opción: 2
+Ingresa la distancia recorrida en km: 120
+Ingresa los litros consumidos: 10
++-----------------------------+-------------+
+| Concepto                    | Resultado   |
++=============================+=============+
+| Distancia recorrida         | 120.00 km   |
++-----------------------------+-------------+
+| Litros consumidos           | 10.00 L     |
++-----------------------------+-------------+
+| Precio por litro            | 24.00$      |
++-----------------------------+-------------+
+| Rendimiento del vehiculo    | 12.00 km/L  |
++-----------------------------+-------------+
+| Costo total del combustible | $240.00     |
++-----------------------------+-------------+

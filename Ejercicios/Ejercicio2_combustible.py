@@ -38,10 +38,34 @@ precio por litro será de $24.00. '''
 #   calcularCosto: calcula el costo del recorrido en pesos
 #   mostrarResultados: muestra los resultados al usuario
 
+PRECIO_LITRO = 24.00
+
+from tabulate import tabulate
+
 def leerDatos():
-    distancia = float(input("Ingrese la distancia recorrida en kilómetros: "))
-    litros = float(input("Ingrese la cantidad de litros consumidos: "))
+    distancia = float(input("Ingresa la distancia recorrida en km: "))
+    litros = float(input("Ingresa los litros consumidos: "))
     return distancia, litros
 
-def CalcularRendimiento():
-    
+def calcularRendimiento(distancia, litros):
+    if litros > 0:
+        rendimiento = distancia / litros
+    else:
+        rendimiento = 0.00
+    return rendimiento
+
+def calcularCosto(litros):
+    costo = litros * PRECIO_LITRO
+    return costo
+
+def mostrarResultados(distancia, litros, rendimiento, costo):
+    datos = [
+        ["Distancia recorrida", f"{distancia:.2f} km"],
+        ["Litros consumidos", f"{litros:.2f} L"],
+        ["Precio por litro ",f"{24:.2f}$"],
+        ["Rendimiento del vehiculo", f"{rendimiento:.2f} km/L"],
+        ["Costo total del combustible", f"${costo:.2f}"]
+    ]
+
+    print(tabulate(datos, headers=["Concepto", "Resultado"], tablefmt="grid"))
+
