@@ -1,11 +1,36 @@
-'''Crear un menu de opciones donde podamos seleccionar cualquera de los dos ejercicios'''
+from Ejercicios.Ejercicio1_cine import leerCantidad, calcularSubtotal, calcularDescuento, mostrarCompra
+from Ejercicios.Ejercicio2_combustible import leerDatos,
 
-def mostrar_menu():
-    print("Seleccione una opción:")
-    print("1. Ejercicio 1")
-    print("2. Ejercicio 2")
-    print("3. Salir")
 
-def obtener_opcion():
-    opcion = input("Ingrese el número de la opción deseada: ")
-    return opcion
+def ejecutarEjercicio1():
+    cantidad_boletos = leerCantidad()
+    subtotal = calcularSubtotal(cantidad_boletos)
+    descuento_aplicado = calcularDescuento(subtotal, cantidad_boletos)
+    total_a_pagar = subtotal - descuento_aplicado
+    mostrarCompra(cantidad_boletos, subtotal, descuento_aplicado, total_a_pagar)
+
+def ejecutarEjercicio2():
+ print("Ejecutando Ejercicio 2: Comisión de ventas")
+ 
+
+
+def mostrarMenu():
+    print()
+    print("PRÁCTICA: DESARROLLO GUIADO POR ESPECIFICACIÓN") 
+    print("1. Importe de viaje en taxi") 
+    print("2. Comisión de ventas") 
+
+    print("0. Salir") 
+ 
+ 
+def menus(): 
+    opcion = "" 
+    while opcion != "0": 
+        mostrarMenu() 
+        opcion = input("Seleccione una opción: ") 
+        if opcion == "1": 
+            ejecutarEjercicio1() 
+        elif opcion == "2": 
+            ejecutarEjercicio2() 
+        elif opcion != "0": 
+            print("Opción no válida.")
